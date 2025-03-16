@@ -7,9 +7,9 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/', function () {
-    return view('index');
+    return view('dashboard.index');
 });
 
-Route::get('/dashboard', function () {
-    return view('index');
+Route::get('/profile', function () {
+    return view('dashboard.profile');
 });
