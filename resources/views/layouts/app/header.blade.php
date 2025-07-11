@@ -14,10 +14,10 @@
           <a href="{{url('dashboard')}}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Kebun Pedia</a>
+          <a href="#" class="nav-link">Input Data</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{url('weather')}}" class="nav-link">Prakiraan Cuaca</a>
+          <a href="{{url('weather')}}" class="nav-link">   </a>
         </li>
         <div class="text-end">
           <!-- tampilkan tombol sesuai status user -->
@@ -199,7 +199,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item">
-                  <a href="{{ url('dashboard/perdagangan') }}" class="nav-link {{ Request::is('dashboard/perdagangan*') ? 'active' : '' }}">
+                  <a href="{{ url('/') }}" class="nav-link {{ Request::is('dashboard/perdagangan*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Dashboard</p>
                   </a>
