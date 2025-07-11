@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('bku', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nomorbukti');
-            $table->string('nomorkode');
-            $table->string('hari');
-            $table->string('pelunasan');
-            $table->string('pembelian');
-            $table->string('uraian');
-            $table->integer('jumlah');
-            $table->string('terbilang');
-            $table->softDeletes();
-            $table->boolean('active')->default(true);
+            $table->string('nomorbukti')->nullable();
+            $table->string('nomorkode')->nullable();
+            $table->string('hari')->nullable();
+            $table->timestamp('pelunasan')->nullable();
+            $table->timestamp('pembelian')->nullable();
+            $table->string('uraian')->nullable();
+            $table->integer('jumlah')->nullable();
+            $table->string('terbilang')->nullable();
+            $table->softDeletes()->nullable();
+            $table->boolean('active')->default(true)->nullable();
         });
     }
 

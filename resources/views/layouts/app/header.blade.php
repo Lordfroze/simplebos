@@ -17,7 +17,7 @@
           <a href="#" class="nav-link">input bku</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{url('weather')}}" class="nav-link">Prakiraan Cuaca</a>
+          <a href="{{url('weather')}}" class="nav-link">#</a>
         </li>
         <div class="text-end">
           <!-- tampilkan tombol sesuai status user -->
@@ -208,7 +208,7 @@
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- <a href="#" class="nav-link active"> -->
-                  <a href="{{ url('dashboard/perikanan') }}" class="nav-link {{ Request::is('dashboard/perikanan*') ? 'active' : '' }}">
+                  <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>input BKU</p>
                   </a>

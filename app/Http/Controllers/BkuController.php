@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use App\Models\Perikanan;
+use App\Models\Bku;
 
 
 
@@ -20,10 +20,17 @@ class BkuController extends Controller
         if (!Auth::check()) {
             return redirect('login');
         }
-        // tampilkan table perikanan
-        $tasks = Perikanan::where('active', '=', true)
-            ->orderBy('created_at', 'desc')
+        // tampilkan table bku
+        $tasks = Bku::where('active', '=', true)
             ->paginate(10);
+
+        // Membuat array untuk menyimpan data
+        $view_data = [
+            'tasks' => $tasks,
+        ];
+
+        // Menampilkan view dengan data
+        return view('dashboard.bku.index', $view_data);
     }
 
     /**
