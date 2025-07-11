@@ -9,6 +9,7 @@ use App\Http\Controllers\PerikananController;
 use App\Http\Controllers\PerkebunanController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\DataExportController;
+use App\Http\Controllers\BkuController;
 
 // Login Logout
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -25,6 +26,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/dashboard/perikanan', [PerikananController::class, 'index'])->name('perikanan');
 Route::get('/dashboard/perdagangan', [PerdaganganController::class, 'index'])->name('perdagangan');
 Route::get('/dashboard/perkebunan', [PerkebunanController::class, 'index'])->name('perkebunan');
+Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);
