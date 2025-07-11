@@ -14,7 +14,7 @@
           <a href="{{url('dashboard')}}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Kebun Pedia</a>
+          <a href="#" class="nav-link">input bku</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{{url('weather')}}" class="nav-link">Prakiraan Cuaca</a>
@@ -166,17 +166,17 @@
       <!-- Brand Logo -->
       <a href="{{url('dashboard')}}" class="brand-link">
         <!-- <img src="{{ asset('lte/dist/img/logo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
-        <span class="brand-text font-weight-light">Kebun Kita V.1</span>
+        <span class="brand-text font-weight-light">Simple BOS V.1</span>
       </a>
       <!-- Sidebar -->
       <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
-            <img src="{{asset ('lte/dist/img/yoga.png') }}" class="img-circle elevation-2" alt="User Image">
+            <img src="{{asset ('lte/dist/img/logo.png') }}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Yoga adi pratama</a>
+            <a href="#" class="d-block">SDN 1 KALIMARO</a>
           </div>
         </div>
 
@@ -210,23 +210,23 @@
                   <!-- <a href="#" class="nav-link active"> -->
                   <a href="{{ url('dashboard/perikanan') }}" class="nav-link {{ Request::is('dashboard/perikanan*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Perikanan</p>
+                    <p>input BKU</p>
                   </a>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="{{ url('dashboard/perdagangan') }}" class="nav-link {{ Request::is('dashboard/perdagangan*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Perdagangan</p>
                   </a>
-                </li>
+                </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <a href="{{ url('dashboard/perkebunan') }}" class="nav-link {{ Request::is('dashboard/perkebunan*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Perkebunan</p>
                   </a>
-                </li>
+                </li> -->
 
 
               </ul>
