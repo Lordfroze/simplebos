@@ -79,8 +79,6 @@ class BkuController extends Controller
             'uraian' => $uraian,
             'jumlah' => $jumlah,
             'terbilang' => $terbilang,
-            'created_at' => $tanggal,
-            'updated_at' => $tanggal,
         ]);
 
         // kirim telegram setelah menyimpan data
@@ -94,7 +92,14 @@ class BkuController extends Controller
      */
     public function show(string $id)
     {
-        //
+        //tampilkan detail id bku
+        // otentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+        // menampilkan halaman detail items
+        $bkus = Bku::findOrFail($id);
+        return view('dashboard.bku.show', compact('bkus'));
     }
 
     /**

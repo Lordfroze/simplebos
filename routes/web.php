@@ -31,6 +31,7 @@ Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 // Route Controller Bku
 Route::get('/dashboard/bku/create', [BkuController::class, 'create']);
 Route::post('/dashboard/bku', [BkuController::class, 'store']);
+Route::get('/dashboard/bku/{id}', [BkuController::class, 'show']);
 
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);

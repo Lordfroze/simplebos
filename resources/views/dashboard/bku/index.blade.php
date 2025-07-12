@@ -67,7 +67,7 @@ Dashboard BKU
 <div class="content">
   <h2>Tabel Buku Kas Umum</h1>
 
-    <a class="btn btn-success" href="{{ url('dashboard/perikanan/create') }}">+ Tambah Data</a>
+    <a class="btn btn-success" href="{{ url('dashboard/bku/create') }}">+ Tambah Data</a>
     <div class="table-responsive mt-2">
       <table class="table table-bordered table-striped table-hover">
         <thead>
@@ -98,9 +98,9 @@ Dashboard BKU
             <td>{{ number_format($task->jumlah, 0, ',', '.') }}</td>
             <td>{{ $task->terbilang }}</td>
             <td>
-              <a class="btn btn-primary btn-sm" href="{{ url('dashboard/perikanan/' . $task->id) }}" role="button">View</a>
-              <a class="btn btn-info btn-sm" href="{{ url('dashboard/perikanan/' . $task->id . '/edit') }}" role="button">Edit</a>
-              <form action="{{ url('dashboard/perikanan/' . $task->id) }}" method="POST" style="display:inline;">
+              <a class="btn btn-primary btn-sm" href="{{ url('dashboard/bku/' . $task->id) }}" role="button">View</a>
+              <a class="btn btn-info btn-sm" href="{{ url('dashboard/bku/' . $task->id . '/edit') }}" role="button">Edit</a>
+              <form action="{{ url('dashboard/bku/' . $task->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apa anda yakin ingin menghapus data?')">Delete</button>
