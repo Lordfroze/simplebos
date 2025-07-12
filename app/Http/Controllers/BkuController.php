@@ -107,7 +107,15 @@ class BkuController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
+        //otentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        // menampilkan halaman edit items
+        $bkus = Bku::findOrFail($id);
+        return view('dashboard.bku.edit', compact('bkus'));
     }
 
     /**
@@ -115,7 +123,36 @@ class BkuController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //otentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        // menerima data dari form
+        $tanggal = $request->input('tanggal') ?? now()->toDateString();  //Set tanggal to current date if not provided
+        $nomorbukti = $request->input('nomorbukti');
+        $nomorkode = $request->input('nomorkode');
+        $hari = $request->input('hari');
+        $pelunasan = $request->input('pelunasan');
+        $pembelian = $request->input('pembelian');
+        $uraian = $request->input('uraian');
+        $jumlah = $request->input('jumlah');
+        $terbilang = $request->input('terbilang');
+
+        // update data
+        Bku::where('id', $id)->update([
+            'updated_at' => $tanggal,
+            'nomorbukti' => $nomorbukti,
+            'nomorkode' => $nomorkode,
+            'hari' => $hari,
+            'pelunasan' => $pelunasan,
+            'pembelian' => $pembelian,
+            'uraian' => $uraian,
+            'jumlah' => $jumlah,
+            'terbilang' => $terbilang,
+        ]);
+        
+        return redirect('/dashboard/bku')->with('success', 'Data Sukses Diubah');
     }
 
     /**
@@ -123,6 +160,14 @@ class BkuController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // ontentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        // delete data
+        $bkus = Bku::findOrFail($id);
+        $bkus->delete();
+        return redirect('/dashboard/bku')->with('error', 'Data Sukses Dihapus');
     }
 }

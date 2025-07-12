@@ -22,7 +22,15 @@ class Bku extends Model
         'pembelian',
         'uraian',
         'jumlah',
-        'terbilang'
+        'terbilang',
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
+
+    protected $casts = [
+    'pelunasan' => 'datetime',
+    'pembelian' => 'datetime',
     ];
 
     public function scopeActive($query)

@@ -10,6 +10,7 @@ use App\Http\Controllers\PerkebunanController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\DataExportController;
 use App\Http\Controllers\BkuController;
+use App\Models\Bku;
 
 // Login Logout
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -32,6 +33,10 @@ Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 Route::get('/dashboard/bku/create', [BkuController::class, 'create']);
 Route::post('/dashboard/bku', [BkuController::class, 'store']);
 Route::get('/dashboard/bku/{id}', [BkuController::class, 'show']);
+Route::get('/dashboard/bku/{id}/edit', [BkuController::class, 'edit']);
+Route::patch('/dashboard/bku/{id}', [BkuController::class, 'update']);
+Route::delete('/dashboard/bku/{id}', [BkuController::class, 'destroy']);
+
 
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);
