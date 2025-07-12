@@ -38,7 +38,13 @@ class BkuController extends Controller
      */
     public function create()
     {
-        //
+        // otentikasi jika user belum login
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        // mengarahkan ke halaman create
+        return view('dashboard.bku.create');
     }
 
     /**
@@ -46,7 +52,41 @@ class BkuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // otentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+
+        // menerima data dari form
+        $tanggal = $request->input('tanggal') ?? now()->toDateString();  //Set tanggal to current date if not provided
+        $nomorbukti = $request->input('nomorbukti');
+        $nomorkode = $request->input('nomorkode');
+        $hari = $request->input('hari');
+        $pelunasan = $request->input('pelunasan');
+        $pembelian = $request->input('pembelian');
+        $uraian = $request->input('uraian');
+        $jumlah = $request->input('jumlah');
+        $terbilang = $request->input('terbilang');
+
+        // simpan data ke database
+        $bku = Bku::create([
+            'tanggal' => $tanggal,
+            'nomorbukti' => $nomorbukti,
+            'nomorkode' => $nomorkode,
+            'hari' => $hari,
+            'pelunasan' => $pelunasan,
+            'pembelian' => $pembelian,
+            'uraian' => $uraian,
+            'jumlah' => $jumlah,
+            'terbilang' => $terbilang,
+            'created_at' => $tanggal,
+            'updated_at' => $tanggal,
+        ]);
+
+        // kirim telegram setelah menyimpan data
+        // $this->notify_telegram($items);  // agar tidak terlalu panjang dipisah ke fungsi notify_telegram dibawah
+
+        return redirect('/dashboard/bku')->with('success', 'Data Sukses Ditambahkan');
     }
 
     /**

@@ -79,6 +79,7 @@ Dashboard BKU
             <th>Tanggal Pelunasan</th>
             <th>Tanggal Pembelian</th>
             <th>Uraian</th>
+            <th>Jumlah</th>
             <th>Terbilang</th>
             <th>Aksi</th>
           </tr>
@@ -94,6 +95,7 @@ Dashboard BKU
             <td>{{ \Carbon\Carbon::parse($task->pelunasan)->locale('id')->isoFormat('DD MMMM YYYY') }}</td>
             <td>{{ \Carbon\Carbon::parse($task->pembelian)->locale('id')->isoFormat('DD MMMM YYYY') }}</td>
             <td>{{ $task->uraian }}</td>
+            <td>{{ number_format($task->jumlah, 0, ',', '.') }}</td>
             <td>{{ $task->terbilang }}</td>
             <td>
               <a class="btn btn-primary btn-sm" href="{{ url('dashboard/perikanan/' . $task->id) }}" role="button">View</a>

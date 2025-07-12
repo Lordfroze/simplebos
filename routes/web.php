@@ -28,6 +28,10 @@ Route::get('/dashboard/perdagangan', [PerdaganganController::class, 'index'])->n
 Route::get('/dashboard/perkebunan', [PerkebunanController::class, 'index'])->name('perkebunan');
 Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 
+// Route Controller Bku
+Route::get('/dashboard/bku/create', [BkuController::class, 'create']);
+Route::post('/dashboard/bku', [BkuController::class, 'store']);
+
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);
 Route::get('/dashboard/perikanan/kolam_barat', [PerikananController::class, 'kolam_barat']);

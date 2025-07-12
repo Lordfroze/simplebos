@@ -31,14 +31,14 @@ class Bku extends Model
     }
 
     // menambah komentar mengambil data dari model Comment
-    public function comments()
-    {
-        return $this->hasMany(Comment::class);
-    }
+    // public function comments()
+    // {
+    //     return $this->hasMany(Comment::class);
+    // }
 
     // menambahkan total komentar
-    public function total_comments()
-    {
-        return $this->comments()->count();
-    }
+    // public function total_comments()
+    // {
+    //     return $this->comments()->count();
+    // }
 }
