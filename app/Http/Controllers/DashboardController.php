@@ -47,6 +47,17 @@ class DashboardController extends Controller
         return view('dashboard/perdagangan/settingbarang');
     }
 
+    //Halaman setting bku
+    function settingbku()
+    {
+        // otentikasi jika user belum login
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+        return view('dashboard/bku/settingbku');
+    }
+    
+
     // Halaman Download
     function download()
     {

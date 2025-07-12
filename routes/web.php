@@ -92,6 +92,7 @@ Route::get('/laravel', function () {
 Route::get('/tambah-data/settingkolam', [DashboardController::class, 'settingkolam'])->name('settingkolam');
 Route::get('/tambah-data/settingkebun', [DashboardController::class, 'settingkebun'])->name('settingkebun');
 Route::get('tambah-data/settingbarang', [DashboardController::class, 'settingbarang'])->name('settingbarang');
+Route::get('tambah-data/settingbku', [DashboardController::class, 'settingbku'])->name('settingbku');
 
 // Cara membuat controller 
 // php artisan make:controller AdminController

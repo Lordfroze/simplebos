@@ -14,7 +14,7 @@
           <a href="{{url('dashboard')}}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">input bku</a>
+          <a href="#" class="nav-link">Input BKU</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{{url('weather')}}" class="nav-link">#</a>
@@ -236,27 +236,15 @@
               <a href="#" class="nav-link {{ Request::is('tambah-data*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-bars"></i>
                 <p>
-                  Tambah Data
+                  Konfigurasi Data
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ url('tambah-data/settingkolam') }}" class="nav-link {{ Request::is('tambah-data/settingkolam*') ? 'active' : '' }}">
+                  <a href="{{ url('tambah-data/settingbku') }}" class="nav-link {{ Request::is('tambah-data/settingbku*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Perikanan</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ url('tambah-data/settingkebun') }}" class="nav-link {{ Request::is('tambah-data/settingkebun') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Perkebunan</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ url('tambah-data/settingbarang') }}" class="nav-link {{ Request::is('tambah-data/settingbarang*') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Perdagangan</p>
+                    <p>Setting BKU</p>
                   </a>
                 </li>
               </ul>
