@@ -22,7 +22,7 @@ Dashboard BKU
             <p>Jumlah</p>
           </div>
           <div class="icon">
-            <i class="fas fa-hand-holding-heart"></i>
+            <i class="fas fa-hand-holding-dollar"></i>
           </div>
           <a href="{{ url('dashboard/perikanan/kolam_timur') }}" class="small-box-footer">
             More info <i class="fas fa-arrow-circle-right"></i>
@@ -37,7 +37,7 @@ Dashboard BKU
             <p>Jumlah</p>
           </div>
           <div class="icon">
-            <i class="fas fa-hand-holding-heart"></i>
+            <i class="fas fa-hand-holding-dollar"></i>
           </div>
           <a href="{{ url('/dashboard/perikanan/kolam_barat') }}" class="small-box-footer">
             More info <i class="fas fa-arrow-circle-right"></i>
@@ -52,7 +52,7 @@ Dashboard BKU
             <p>Jumlah</p>
           </div>
           <div class="icon">
-            <i class="fas fa-fish"></i>
+            <i class="fas fa-book"></i>
           </div>
           <a href="{{ url('/dashboard/perikanan/jumlah_ikan') }}" class="small-box-footer">
             More info <i class="fas fa-arrow-circle-right"></i>
@@ -65,7 +65,7 @@ Dashboard BKU
 </div><!-- /.content -->
 
 <div class="content">
-  <h2>Tabel BKU</h1>
+  <h2>Tabel Buku Kas Umum</h1>
 
     <a class="btn btn-success" href="{{ url('dashboard/perikanan/create') }}">+ Tambah Data</a>
     <div class="table-responsive mt-2">
