@@ -210,7 +210,15 @@
                   <!-- <a href="#" class="nav-link active"> -->
                   <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Buku Kas Umum</p>
+                    <p>Input Buku Kas Umum</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <!-- <a href="#" class="nav-link active"> -->
+                  <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Kwitansi</p>
                   </a>
                 </li>
 
