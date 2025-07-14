@@ -29,7 +29,9 @@ Route::get('/dashboard/perdagangan', [PerdaganganController::class, 'index'])->n
 Route::get('/dashboard/perkebunan', [PerkebunanController::class, 'index'])->name('perkebunan');
 Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 
+
 // Route Controller Bku
+Route::get('/dashboard/bku/kwitansi/{id}', [BkuController::class, 'kwitansi'])->name('kwitansi');
 Route::get('/dashboard/bku/create', [BkuController::class, 'create']);
 Route::post('/dashboard/bku', [BkuController::class, 'store']);
 Route::get('/dashboard/bku/{id}', [BkuController::class, 'show']);

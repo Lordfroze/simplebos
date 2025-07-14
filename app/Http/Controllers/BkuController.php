@@ -170,4 +170,17 @@ class BkuController extends Controller
         $bkus->delete();
         return redirect('/dashboard/bku')->with('error', 'Data Sukses Dihapus');
     }
+
+    public function kwitansi(string $id)
+    {
+        //tampilkan detail id bku
+        // otentikasi user
+        if (!Auth::check()) {
+            return redirect('login');
+        }
+        // menampilkan halaman detail items
+        $bkus = Bku::findOrFail($id);
+        return view('dashboard.bku.kwitansi', compact('bkus'));
+    }
+
 }
