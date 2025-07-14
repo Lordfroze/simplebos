@@ -197,6 +197,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               <!-- MENU DASHBOARD -->
             <li class="nav-item {{ Request::is('dashboard*') ? 'menu-open' : '' }}"">
               <a href=" #" class="nav-link {{ Request::is('dashboard*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-bars"></i>
@@ -208,9 +209,9 @@
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <!-- <a href="#" class="nav-link active"> -->
-                  <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
+                  <a href="{{ url('dashboard') }}" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Input Buku Kas Umum</p>
+                    <p>Dashboard</p>
                   </a>
                 </li>
 
@@ -218,9 +219,28 @@
                   <!-- <a href="#" class="nav-link active"> -->
                   <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Kwitansi</p>
+                    <p>Input Buku Kas Umum</p>
                   </a>
                 </li>
+
+              <!-- MENU KWITANSI -->
+                <li class="nav-item {{ Request::is('tambah-data*') ? 'menu-open' : '' }}">
+              <a href="#" class="nav-link {{ Request::is('tambah-data*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-bars"></i>
+                <p>
+                  Kwitansi
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ url('dashboard/bku/kwitansi/1') }}" class="nav-link {{ Request::is('dashboard/bku/kwitansi/1*') ? 'active' : '' }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Indomaret</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
 
                 <!-- <li class="nav-item">
                   <a href="{{ url('dashboard/perdagangan') }}" class="nav-link {{ Request::is('dashboard/perdagangan*') ? 'active' : '' }}">

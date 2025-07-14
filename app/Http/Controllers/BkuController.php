@@ -180,7 +180,7 @@ class BkuController extends Controller
         }
         // menampilkan halaman detail items
         $bkus = Bku::findOrFail($id);
-        return view('dashboard.bku.kwitansi', compact('bkus'));
+        return view('dashboard.bku.kwitansi.indomaret', compact('bkus'));
     }
 
 }
