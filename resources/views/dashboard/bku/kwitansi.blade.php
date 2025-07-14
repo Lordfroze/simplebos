@@ -147,17 +147,17 @@
             </tr>
             <tr>
                 <th>Banyaknya uang</th>
-                <td>: Empat Ratus Lima Puluh Ribu Rupiah</td>
+                <td>: {{$bkus->terbilang}}</td>
             </tr>
             <tr>
                 <th>Untuk Pembayaran</th>
-                <td>: Dibayar Langganan Internet Indihome/Speedy Tgl. 17-05-2024</td>
+                <td>: {{$bkus->uraian}}</td>
             </tr>
         </table>
 
         <div class="amount-container">
             <div class="amount-label">Rp.</div>
-            <div class="amount-box"><i>450.000,00</i></div>
+            <div class="amount-box"><i>{{number_format($bkus->jumlah, 0, ',', '.')}}</i></div>
         </div>
 
         <table class="ttd-table">
