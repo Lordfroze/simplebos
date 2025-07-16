@@ -31,7 +31,6 @@ Route::get('/dashboard/bku', [BkuController::class, 'index'])->name('bku');
 
 
 // Route Controller Bku
-Route::get('/dashboard/bku/kwitansi/{id}', [BkuController::class, 'kwitansi'])->name('kwitansi');
 Route::get('/dashboard/bku/create', [BkuController::class, 'create']);
 Route::post('/dashboard/bku', [BkuController::class, 'store']);
 Route::get('/dashboard/bku/{id}', [BkuController::class, 'show']);
@@ -39,6 +38,9 @@ Route::get('/dashboard/bku/{id}/edit', [BkuController::class, 'edit']);
 Route::patch('/dashboard/bku/{id}', [BkuController::class, 'update']);
 Route::delete('/dashboard/bku/{id}', [BkuController::class, 'destroy']);
 
+// Route Controller kwitansi
+Route::get('/kwitansi', [BkuController::class, 'kwitansi'])->name('kwitansi');
+Route::get('/kwitansi/{id}', [BkuController::class, 'print_kwitansi'])->name('print_kwitansi');
 
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);

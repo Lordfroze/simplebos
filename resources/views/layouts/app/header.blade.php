@@ -197,7 +197,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-               <!-- MENU DASHBOARD -->
+            <!-- MENU DASHBOARD -->
             <li class="nav-item {{ Request::is('dashboard*') ? 'menu-open' : '' }}"">
               <a href=" #" class="nav-link {{ Request::is('dashboard*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-bars"></i>
@@ -217,76 +217,66 @@
 
                 <li class="nav-item">
                   <!-- <a href="#" class="nav-link active"> -->
-                  <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku*') ? 'active' : '' }}">
+                  <a href="{{ url('dashboard/bku') }}" class="nav-link {{ Request::is('dashboard/bku') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Input Buku Kas Umum</p>
                   </a>
                 </li>
+            </li>
+          </ul>
 
-              <!-- MENU KWITANSI -->
-                <li class="nav-item {{ Request::is('tambah-data*') ? 'menu-open' : '' }}">
-              <a href="#" class="nav-link {{ Request::is('tambah-data*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-bars"></i>
-                <p>
-                  Kwitansi
-                  <i class="right fas fa-angle-left"></i>
-                </p>
+          <!-- MENU KWITANSI -->
+<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item {{ Request::is('kwitansi*') ? 'menu-open' : '' }}"">
+              <a href=" #" class="nav-link {{ Request::is('kwitansi*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+                Kwitansi
+                <i class="right fas fa-angle-left"></i>
+              </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ url('dashboard/bku/kwitansi/1') }}" class="nav-link {{ Request::is('dashboard/bku/kwitansi/1*') ? 'active' : '' }}">
+                  <!-- <a href="#" class="nav-link active"> -->
+                  <a href="{{ url('kwitansi') }}" class="nav-link {{ Request::is('kwitansi') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>Indomaret</p>
+                    <p>Cetak Kwitansi</p>
                   </a>
                 </li>
-              </ul>
             </li>
+          </ul>
 
-                <!-- <li class="nav-item">
-                  <a href="{{ url('dashboard/perdagangan') }}" class="nav-link {{ Request::is('dashboard/perdagangan*') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Perdagangan</p>
-                  </a>
-                </li> -->
+          <!-- Menu konfigurasi data -->
 
-                <!-- <li class="nav-item">
-                  <a href="{{ url('dashboard/perkebunan') }}" class="nav-link {{ Request::is('dashboard/perkebunan*') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Perkebunan</p>
-                  </a>
-                </li> -->
+          <li class="nav-item {{ Request::is('tambah-data*') ? 'menu-open' : '' }}">
+            <a href="#" class="nav-link {{ Request::is('tambah-data*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-bars"></i>
+              <p>
+                Konfigurasi Data
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('tambah-data/settingbku') }}" class="nav-link {{ Request::is('tambah-data/settingbku*') ? 'active' : '' }}">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Setting BKU</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
-
-              </ul>
-            </li>
-
-            <li class="nav-item {{ Request::is('tambah-data*') ? 'menu-open' : '' }}">
-              <a href="#" class="nav-link {{ Request::is('tambah-data*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-bars"></i>
-                <p>
-                  Konfigurasi Data
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ url('tambah-data/settingbku') }}" class="nav-link {{ Request::is('tambah-data/settingbku*') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Setting BKU</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item">
-              <a href="{{ url('download') }}" class="nav-link {{ Request::is('download*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-download"></i>
-                <p>
-                  Unduh Data
-                  <span class="right badge badge-danger">New</span>
-                </p>
-              </a>
-            </li>
+          <li class="nav-item">
+            <a href="{{ url('download') }}" class="nav-link {{ Request::is('download*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-download"></i>
+              <p>
+                Unduh Data
+                <span class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
           </ul>
         </nav>
         <!-- /.sidebar-menu -->

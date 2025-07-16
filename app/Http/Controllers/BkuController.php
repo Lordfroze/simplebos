@@ -171,7 +171,15 @@ class BkuController extends Controller
         return redirect('/dashboard/bku')->with('error', 'Data Sukses Dihapus');
     }
 
-    public function kwitansi(string $id)
+  // tampilkan halaman kwitansi
+    public function kwitansi()
+    {
+        $bkus = Bku::all();
+        return view('dashboard.bku.kwitansi.index', compact('bkus'));
+    }
+
+    // Print Kwitansi
+    public function print_kwitansi(string $id)
     {
         //tampilkan detail id bku
         // otentikasi user
