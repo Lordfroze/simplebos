@@ -179,7 +179,7 @@ class BkuController extends Controller
     }
 
     // Print Kwitansi
-    public function print_kwitansi(string $id)
+    public function kwitansi_indomaret(string $id)
     {
         //tampilkan detail id bku
         // otentikasi user

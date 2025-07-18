@@ -100,6 +100,7 @@ Dashboard BKU
             <td>
               <a class="btn btn-primary btn-sm" href="{{ url('dashboard/bku/' . $task->id) }}" role="button">View</a>
               <a class="btn btn-info btn-sm" href="{{ url('dashboard/bku/' . $task->id . '/edit') }}" role="button">Edit</a>
+              <a class="btn btn-warning btn-sm" href="{{ url('kwitansi/indomaret/' . $task->id) }}" role="button">Cetak</a>
               <form action="{{ url('dashboard/bku/' . $task->id) }}" method="POST" style="display:inline;">
                 @csrf
                 @method('DELETE')

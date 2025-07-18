@@ -40,7 +40,7 @@ Route::delete('/dashboard/bku/{id}', [BkuController::class, 'destroy']);
 
 // Route Controller kwitansi
 Route::get('/kwitansi', [BkuController::class, 'kwitansi'])->name('kwitansi');
-Route::get('/kwitansi/{id}', [BkuController::class, 'print_kwitansi'])->name('print_kwitansi');
+Route::get('/kwitansi/indomaret/{id}', [BkuController::class, 'kwitansi_indomaret'])->name('kwitansi_indomaret');
 
 // Route Controller Perikanan
 Route::get('/dashboard/perikanan/kolam_timur', [PerikananController::class, 'kolam_timur']);

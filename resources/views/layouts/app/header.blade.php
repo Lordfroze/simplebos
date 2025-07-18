@@ -1,4 +1,4 @@
-<!-- Header -->
+  <!-- Header -->
 
 <body class="hold-transition sidebar-mini" id="body">
   <div class="wrapper">
@@ -243,6 +243,14 @@
                   <a href="{{ url('kwitansi') }}" class="nav-link {{ Request::is('kwitansi') ? 'active' : '' }}">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Cetak Kwitansi</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <!-- <a href="#" class="nav-link active"> -->
+                  <a href="{{ url('kwitansi/indomaret/1') }}" class="nav-link {{ Request::is('indomaret') ? 'active' : '' }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>indomaret</p>
                   </a>
                 </li>
             </li>
