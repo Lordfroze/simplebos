@@ -106,6 +106,10 @@
             width: 14cm;
 
             box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            /* Ensure background prints */
+            print-color-adjust: exact;
+            /* For other browsers */
         }
 
         .ttd-table {
@@ -146,7 +150,7 @@
         .code-box-out {
             position: absolute;
             top: 0;
-            right:0;
+            right: 0;
             border: 1px solid #000;
             padding: 4px 8px;
             font-size: 12px;
@@ -160,7 +164,7 @@
 <body>
 
     <div class="outer-border">
-        
+
         <div class="code-box-out">No. Kode : {{$bkus->nomorbukti}} </div>
         <div class="kwitansi">
             <div class="header">
