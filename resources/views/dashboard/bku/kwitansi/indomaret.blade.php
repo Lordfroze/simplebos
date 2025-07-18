@@ -6,7 +6,7 @@
     <title>Kwitansi</title>
     <style>
         @page {
-            size: A4 landscape;
+            size: A4 portrait;
             margin: 20mm;
         }
 
