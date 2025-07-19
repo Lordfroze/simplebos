@@ -172,9 +172,9 @@ class BkuController extends Controller
     }
 
   // tampilkan halaman kwitansi
-    public function kwitansi()
+    public function kwitansi(string $id)
     {
-        $bkus = Bku::all();
+        $bkus = Bku::findOrFail($id);
         return view('dashboard.bku.kwitansi.index', compact('bkus'));
     }
 
