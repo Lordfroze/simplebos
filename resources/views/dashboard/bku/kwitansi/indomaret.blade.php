@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <title>Kwitansi</title>
     <style>
         @page {
             size: A4 portrait;
-            margin: 20mm;
         }
 
         body {
             font-family: Arial, sans-serif;
             background: #f5f5f5;
             margin: 0;
-            padding: 40px;
+            padding: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .kwitansi {
-            width: 20cm;
+            width: 15cm;
             border: 2px solid #000;
             border-radius: 20px;
-            padding: 30px;
+            padding: 20px;
             background-color: white;
             box-sizing: border-box;
         }
 
-        .outer-border {
-            border: 3px solid black;
-            /* garis luar hitam */
-            padding: 1px;
-            border-radius: 24px;
-            display: inline-block;
-        }
+                /* BOX ATAS */
+.bku-box {
+    position: relative;
+    top: -460px;
+    left: 580px;
+    display: inline-block;
+    background: #fff;
+    border: 2px solid #000;
+    padding: 6px 18px;
+    font-weight: bold;
+    font-size: 15px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+		
+			.outer-border {
+			border: 3px solid black;   /* garis luar hitam */
+			padding: 4px;
+			border-radius: 24px;
+			display: inline-block;
+		}
 
 
         .header {
@@ -72,8 +84,7 @@
             font-size: 14px;
         }
 
-        table.info td,
-        table.info th {
+        table.info td, table.info th {
             padding: 5px;
             vertical-align: top;
             text-align: left;
@@ -88,23 +99,25 @@
         .amount-label {
             font-weight: bold;
             font-size: 14px;
-            width: 3cm;
+			width: 3cm; 
             margin-right: 2px;
-            margin-left: 20px;
-            text-align: center;
+			margin-left: 20px;
+			text-align: center;
         }
 
+
         .amount-box {
-            background: repeating-linear-gradient(-45deg,
-                    #ccc,
-                    #ccc 2px,
-                    #eee 2px,
-                    #eee 5px);
+            background: repeating-linear-gradient(
+			-45deg,
+			#ccc,
+			#ccc 2px,
+			#eee 2px,
+			#eee 5px );
             font-weight: bold;
             font-size: 18px;
             padding: 10px;
-            width: 14cm;
-
+            width: 14cm; 
+          
             box-sizing: border-box;
             -webkit-print-color-adjust: exact;
             /* Ensure background prints */
@@ -134,77 +147,55 @@
         .nip {
             font-size: 10px;
         }
-
-        .code-box {
-            position: absolute;
-            top: 0;
-            right: 0;
-            border: 1px solid #000;
-            padding: 4px 8px;
-            font-size: 12px;
-            background-color: white;
-            /* agar teks terlihat jelas */
-            z-index: 10;
-        }
-
-        .code-box-out {
-            position: absolute;
-            top: 0;
-            right: 0;
-            border: 1px solid #000;
-            padding: 4px 8px;
-            font-size: 12px;
-            background-color: white;
-            /* agar teks terlihat jelas */
-            z-index: 10;
-        }
     </style>
+    
 </head>
-
 <body>
 
-    <div class="outer-border">
+<!-- BOX ATAS -->
+<div class="bku-box">{{$bkus->nomorbukti}}</div>
+</div>
 
-        <div class="code-box-out">No. Kode : {{$bkus->nomorbukti}} </div>
-        <div class="kwitansi">
-            <div class="header">
-                <h1>Kwitansi</h1>
-                <p>(Tanda Bukti Pembayaran)</p>
-                <div class="code-box">No. Kode : {{$bkus->nomorkode}} </div>
-            </div>
+<div class="outer-border">
+    <div class="kwitansi">
+        <div class="header">
+            <h1>Kwitansi</h1>
+            <p>(Tanda Bukti Pembayaran)</p>
+            <div class="code-box">No.Kode :{{$bkus->nomorkode}}</div>
+        </div>
 
-            <table class="info">
-                <tr>
-                    <th>Sudah terima dari</th>
-                    <td>: Kepala SDN 1 Kalimaro</td>
-                </tr>
-                <tr>
-                    <th>Banyaknya uang</th>
-                    <td>: {{$bkus->terbilang}}</td>
-                </tr>
-                <tr>
-                    <th>Untuk Pembayaran</th>
-                    <td>: {{$bkus->uraian}}</td>
-                </tr>
-            </table>
+        <table class="info">
+            <tr>
+                <th>Sudah terima dari</th>
+                <td>: Kepala SDN 1 Kalimaro</td>
+            </tr>
+            <tr>
+                <th>Banyaknya uang</th>
+                <td>: {{$bkus->terbilang}}</td>
+            </tr>
+            <tr>
+                <th>Untuk Pembayaran</th>
+                <td>: {{$bkus->uraian}}</td>
+            </tr>
+        </table>
 
-            <div class="amount-container">
-                <div class="amount-label">Rp.</div>
-                <div class="amount-box"><i>{{number_format($bkus->jumlah, 0, ',', '.')}}</i></div>
-            </div>
+        <div class="amount-container">
+            <div class="amount-label">Rp.</div>
+            <div class="amount-box"><i>{{number_format($bkus->jumlah, 0, ',', '.')}}</i></div>
+        </div>
 
-            <table class="ttd-table">
-                <tr>
-                    <td>Setuju dibayar<br>Kepala Sekolah</td>
-                    <td>Lunas dibayar, 17-05-2024<br>Bendahara</td>
-                    <td>Kalimaro, 17 Mei 2024<br>Yang menerima untuk dibayarkan</td>
-                </tr>
-                <tr class="ttd-space">
-                    <td><br><br></td>
-                    <td><br><br></td>
-                    <td><br><br></td>
-                </tr>
-                <tr>
-                    <td class="ttd-name">SUMARNO, S.Pd<br><span class="nip">NIP. 19650502 199103 1 010</span></td>
-                    <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
-                    <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
+        <table class="ttd-table">
+            <tr>
+                <td>Setuju dibayar<br>Kepala Sekolah</td>
+                <td>Lunas dibayar, 17-05-2024<br>Bendahara</td>
+                <td>Kalimaro, 17 Mei 2024<br>Yang menerima untuk dibayarkan</td>
+            </tr>
+            <tr class="ttd-space">
+                <td><br><br></td>
+                <td><br><br></td>
+                <td><br><br></td>
+            </tr>
+            <tr>
+                <td class="ttd-name">SUMARNO, S.Pd<br><span class="nip">NIP. 19650502 199103 1 010</span></td>
+                <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
+                <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
