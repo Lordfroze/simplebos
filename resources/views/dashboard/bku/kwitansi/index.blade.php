@@ -77,10 +77,6 @@ Print Kwitansi {{$bkus->nomorbukti}}
     const bkusId = "{{ $bkus->id }}";
     const url = `/kwitansi/${bkusId}/${template}`;
 
-    // Change form action and submit
-    // this.action = url;
-    // this.submit();
-
     // Open the URL in a new tab
     window.open(url, '_blank');
   });

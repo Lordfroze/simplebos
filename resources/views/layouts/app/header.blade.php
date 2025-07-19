@@ -226,35 +226,36 @@
           </ul>
 
           <!-- MENU KWITANSI -->
-<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+<!-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"> -->
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item {{ Request::is('kwitansi*') ? 'menu-open' : '' }}"">
-              <a href=" #" class="nav-link {{ Request::is('kwitansi*') ? 'active' : '' }}">
-              <i class="nav-icon fas fa-bars"></i>
-              <p>
-                Kwitansi
-                <i class="right fas fa-angle-left"></i>
-              </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
+            <!-- <li class="nav-item {{ Request::is('kwitansi*') ? 'menu-open' : '' }}""> -->
+              <!-- <a href=" #" class="nav-link {{ Request::is('kwitansi*') ? 'active' : '' }}"> -->
+              <!-- <i class="nav-icon fas fa-bars"></i> -->
+              <!-- <p> -->
+                <!-- Kwitansi -->
+                <!-- <i class="right fas fa-angle-left"></i> -->
+              <!-- </p> -->
+              <!-- </a> -->
+              <!-- <ul class="nav nav-treeview"> -->
+                <!-- <li class="nav-item"> -->
                   <!-- <a href="#" class="nav-link active"> -->
-                  <a href="{{ url('kwitansi') }}" class="nav-link {{ Request::is('kwitansi') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Cetak Kwitansi</p>
-                  </a>
-                </li>
+                  <!-- <a href="{{ url('kwitansi') }}" class="nav-link {{ Request::is('kwitansi') ? 'active' : '' }}"> -->
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <!-- <p>Cetak Kwitansi</p> -->
+                  <!-- </a> -->
+                <!-- </li> -->
 
-                <li class="nav-item">
+                <!-- <li class="nav-item"> -->
                   <!-- <a href="#" class="nav-link active"> -->
-                  <a href="{{ url('kwitansi/indomaret/1') }}" class="nav-link {{ Request::is('indomaret') ? 'active' : '' }}">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>indomaret</p>
-                  </a>
-                </li>
-            </li>
-          </ul>
+                  <!-- <a href="{{ url('kwitansi/indomaret/1') }}" class="nav-link {{ Request::is('indomaret') ? 'active' : '' }}"> -->
+                    <!-- <i class="far fa-circle nav-icon"></i> -->
+                    <!-- <p>indomaret</p> -->
+                  <!-- </a> -->
+                <!-- </li> -->
+            <!-- </li> -->
+          <!-- </ul> -->
+
 
           <!-- Menu konfigurasi data -->
 
