@@ -209,10 +209,11 @@
                     <td class="ttd-name">SUMARNO, S.Pd<br><span class="nip">NIP. 19650502 199103 1 010</span></td>
                     <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
                     <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
-                    <div style="margin-top: 20px; text-align: center;">
-                        <button class="no-print" onclick="window.print()">Print Kwitansi</button>
-                        <button class="no-print" onclick="window.print()">Print Struk Pembelian</button>
-                    </div>
+            </table>
+            <div style="margin-top: 20px; text-align: center;">
+                <button class="no-print" onclick="window.print()">Print Kwitansi</button>
+                <button class="no-print" onclick="window.print()">Print Struk Pembelian</button>
+            </div>
         </div>
     </div>
 
