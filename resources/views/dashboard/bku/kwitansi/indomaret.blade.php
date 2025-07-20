@@ -13,8 +13,8 @@
             font-family: Arial, sans-serif;
             background: #f5f5f5;
             margin: 0;
-            padding: 300px;
-            display: flex;
+            padding: 120px;
+            display: block;
             justify-content: center;
             align-items: center;
         }
@@ -26,13 +26,16 @@
             padding: 20px;
             background-color: white;
             box-sizing: border-box;
+            /* margin: 0 auto 30px auto; */
+            position: relative;
+            display: block;
         }
 
         /* BOX ATAS */
         .bku-box {
-            position: relative;
-            top: -460px;
-            left: 580px;
+            position: absolute;
+            top: 10px;
+            left: 750px;
             display: inline-block;
             background: #fff;
             border: 2px solid #000;
@@ -41,6 +44,14 @@
             font-size: 15px;
             z-index: 10;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .page-break {
+            page-break-before: always;
+            break-before: page;
+            display: block;
+            width: 15cm;
+            margin: 30px auto 0 auto;
         }
 
         .outer-border {
@@ -217,5 +228,7 @@
         </div>
     </div>
 
-
+    <div class="page-break">
+        coba
+    </div>
 </body>
