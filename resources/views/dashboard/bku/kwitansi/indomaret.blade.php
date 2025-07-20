@@ -300,10 +300,10 @@
                     <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
                     <td class="ttd-name">IKA NOVIYANTI, S.Pd<br><span class="nip">NIP. 19861122 201903 2 007</span></td>
             </table>
-            <div style="margin-top: 20px; text-align: center;">
+            <!-- <div style="margin-top: 20px; text-align: center;">
                 <button class="no-print" onclick="window.print()">Print Kwitansi</button>
                 <button class="no-print" onclick="window.print()">Print Struk Pembelian</button>
-            </div>
+            </div> -->
         </div>
     </div>
 

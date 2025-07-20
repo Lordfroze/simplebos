@@ -60,7 +60,7 @@ Print Kwitansi {{$bkus->nomorbukti}}
       </select>
     </div>
 
-    <button type="submit" class="btn btn-primary">Print</button>
+    <button type="submit" class="btn btn-primary" >Print</button>
 </form>
 
 <script>
@@ -77,8 +77,10 @@ Print Kwitansi {{$bkus->nomorbukti}}
     const bkusId = "{{ $bkus->id }}";
     const url = `/kwitansi/${bkusId}/${template}`;
 
-    // Open the URL in a new tab
-    window.open(url, '_blank');
+    // Open the URL in a new tab dan print
+    const printWindow = window.open(url, '_blank');
+    printWindow.print();
+    window.close();
   });
 </script>
 
