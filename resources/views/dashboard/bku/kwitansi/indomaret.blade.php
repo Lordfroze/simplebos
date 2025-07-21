@@ -20,10 +20,11 @@
         }
 
         .kwitansi {
-            width: 15cm;
+            width: 20cm;
+            height: 10cm;
             border: 2px solid #000;
             border-radius: 20px;
-            padding: 20px;
+            padding: 10px;
             background-color: white;
             box-sizing: border-box;
             /* margin: 0 auto 30px auto; */
@@ -35,7 +36,7 @@
         .bku-box {
             position: absolute;
             top: 10px;
-            left: 580px;
+            left: 20cm;
             display: inline-block;
             background: #fff;
             border: 2px solid #000;
