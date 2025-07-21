@@ -13,7 +13,7 @@
             font-family: Arial, sans-serif;
             background: #f5f5f5;
             margin: 0;
-            padding: 120px;
+            padding: 5em;
             display: block;
             justify-content: center;
             align-items: center;
@@ -35,7 +35,7 @@
         .bku-box {
             position: absolute;
             top: 10px;
-            left: 750px;
+            left: 580px;
             display: inline-block;
             background: #fff;
             border: 2px solid #000;
@@ -170,7 +170,7 @@
 
         /* CSS PAGE 2 */
         .header {
-            text-align: left;
+            text-align: center;
             margin-bottom: 10px;
         }
 
